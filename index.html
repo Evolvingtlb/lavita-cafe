@@ -7,6 +7,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+ <link rel="stylesheet" href="./bootstrap/bootstrap-icons.css" />
+    <link rel="manifest" href="./favicon/site.webmanifest" />
+
 <!---  css  --->
 <style>
   html {
@@ -17,7 +20,7 @@
     font-family: 'Vazirmatn', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') no-repeat center center/cover;
+   background-color: #fff1DB;
     color: #333;
     direction: rtl;
     text-align: right;
@@ -31,11 +34,10 @@
     right: 0;
     width: 220px;
     height: 100%;
-    /* background-color: #2e7d32; */
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto;
-     scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
   }
   
 
@@ -200,18 +202,116 @@
       grid-template-columns: 1fr;
     }
   }
+  /*
+==========
+footer
+========== 
+ */
+ul {
+  list-style-type: none;
+}
+.footer {
+  padding-bottom: 1rem;
+  /* background: transparent; */
+  display: grid;
+  place-items: center;
+}
+
+.footer .social-icons {
+  font-size: xx-large;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.footer .social-icon {
+  color: var(--clr-primary-2);
+}
+.footer .social-icon:hover {
+  color: var(--clr-primary-5);
+}
+.footer p {
+  font-size: 1.25rem;
+}
+
+ /*
+==========
+header
+========== 
+ */
+ul {
+  list-style-type: none;
+}
+.header {
+  padding-bottom: 1rem;
+  display: grid;
+}
+
+.header .social-icons {
+  font-size: xx-large;
+  margin-top: 0;
+  margin-bottom:0 ;
+  font-size: medium;
+  text-align: left;
+}
+.header .social-icon {
+  color: var(--clr-primary-2);
+  font-size: larger;
+  font-weight: bolder;
+  
+}
+.header .social-icon:hover {
+  color: var(--clr-primary-5);
+}
+.social-icons li a {
+  text-decoration: none !important;
+}
+.header p {
+  font-size: 1.25rem;
+}
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; 
+  z-index: 99;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  outline: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  display: none;
+  transition: 0.3s;
+}
+#scrollTopBtn:hover {
+  background-color: #3e8e41;
+  transform: scale(1.1);
+}
 </style>
 
 </head>
 <body>
+  
   <!-- محتوای اصلی -->
+   
 <div class="logo">
-    <img src="./../../Downloads/finally-logo-lavita.png" alt="LaVita Logo" width="100">
+    <img src="./img/logo/finally-logo-lavita.png" alt="LaVita Logo" width="100">
   </div>
 
+     <div class="header">
+      <ul class="social-icons">
+          <li>
+          <a href="https://www.instagram.com/lavita_cafe_?igsh=YmZqaWN1cG81ZDNz" class="social-icon">
+            lavita_cafe_@
+            <i class="bi bi-instagram"></i></a>
+          </li>
+       </li>
+       </ul>
+       </div>
 <!-- سایدبار -->
 <div class="sidebar">
-  <h2 onclick="scrollToCategory('offer')">پیشنهاد لاویتا</h2>
   <h2 onclick="scrollToCategory('espresso-hot')">اسپرسو بار (گرم)</h2>
   <h2 onclick="scrollToCategory('coffee')">قهوه های دمی</h2>
   <h2 onclick="scrollToCategory('espresso-cold')">اسپرسو بار(سرد)</h2>
@@ -229,33 +329,15 @@
 
 
 <div class="content">
-  <!--  پیشنهاد لاویتا  -->
-  <div id="offer" class="category">
-    <h2>پیشنهاد لاویتا</h2>
-    <div class="menu-items">
-      <div class="item special">
-        <img src="./../../Downloads/late.JPG" alt="اسپرسو دوبل">
-        <div class="info">
-          <h3>اسپرسو دوبل</h3>
-          <hr>
-          <div class="info-grid">
-            <p></p>
-            <h5>75 تومان</h5>
-          </div>
-          <div class="info-grid">
-            <p>100% عربیکا</p>
-            <h5>117 تومان</h5>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  
+  
+
   <!--  اسپرسو بار گرم-->
   <div id="espresso-hot" class="category">
     <h2>اسپرسو بار (گرم)</h2>
     <div class="menu-items">
       <div class="item">
-        <img src="./../../Downloads/late.JPG" alt="اسپرسو دوبل">
+        <img src="./img/double.jpg" alt="اسپرسو دوبل">
         <div class="info">
           <h3>اسپرسو دوبل</h3>
           <hr>
@@ -274,7 +356,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="آمریکانو">
+        <img src="./img/logo/item-logo.jpg" alt="آمریکانو">
         <div class="info">
           <h3>آمریکانو</h3>
           <hr>
@@ -289,7 +371,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/late.JPG" alt="لته">
         <div class="info">
           <h3>لته</h3>
           <hr>
@@ -304,7 +386,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/late.JPG" alt="لته نوتلا">
         <div class="info">
           <h3>لته نوتلا</h3>
           <hr>
@@ -319,7 +401,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="ماکیاتو">
         <div class="info">
           <h3>ماکیاتو</h3>
           <hr>
@@ -334,7 +416,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="موکا">
         <div class="info">
           <h3>موکا</h3>
           <hr>
@@ -349,7 +431,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="کارامل ماکیاتو">
         <div class="info">
           <h3>کارامل ماکیاتو</h3>
           <hr>
@@ -364,7 +446,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="کاپوچینو کلاسیک">
         <div class="info">
           <h3>کاپوچینو کلاسیک</h3>
           <hr>
@@ -379,7 +461,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="کاپوچینو Good Day">
         <div class="info">
           <h3>کاپوچینو Good Day</h3>
           <hr>
@@ -390,7 +472,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/macha-late.jpg" alt="ماچا لته">
         <div class="info">
           <h3>ماچا لته (انبه/توت فرنگی)</h3>
           <hr>
@@ -408,7 +490,7 @@
     <h2>قهوه های دمی</h2>
     <div class="menu-items">
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="کلد برو">
         <div class="info">
           <h3>کلدبرو</h3>
           <hr>
@@ -416,10 +498,14 @@
             <p></p>
             <h5>135 تومان</h5>
           </div>
+          <hr>
+          قهوه سرد دم
+          <br>
+          اتیوپی سینگل اورجین
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="آمریکانو">
+        <img src="./img/logo/item-logo.jpg" alt="v60">
         <div class="info">
           <h3>v60</h3>
           <hr>
@@ -427,10 +513,11 @@
             <p></p>
             <h5>210 تومان</h5>
           </div>
+          اتیوپی سینگل اورجین
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="کمکس">
         <div class="info">
           <h3>کمکس</h3>
           <hr>
@@ -438,6 +525,7 @@
             <p></p>
             <h5>195 تومان</h5>
           </div>
+          اتیوپی سینگل اورجین
         </div>
       </div>
     </div>
@@ -447,7 +535,7 @@
     <h2>اسپرسو بار (سرد)</h2>
     <div class="menu-items">
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="آیسد کافی">
         <div class="info">
           <h3>آیسد کافی</h3>
           <hr>
@@ -462,7 +550,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="آمریکانو">
+        <img src="./img/logo/item-logo.jpg" alt="آیسد آمریکانو">
         <div class="info">
           <h3>آیسد آمریکانو</h3>
           <hr>
@@ -477,9 +565,9 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="آیسد لته">
         <div class="info">
-          <h3>آیس لته</h3>
+          <h3>آیسد لته</h3>
           <hr>
           <div class="info-grid">
             <p>80% عربیکا</p>
@@ -492,9 +580,9 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="آیسد لته تیرامیسو">
         <div class="info">
-          <h3>آیس لته تیرامیسو</h3>
+          <h3>آیسد لته تیرامیسو</h3>
           <hr>
           <div class="info-grid">
             <p></p>
@@ -503,7 +591,7 @@
         </div>
       </div>
         <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="آیسد کارامل ماکیاتو">
         <div class="info">
           <h3>آیسد کارامل ماکیاتو</h3>
           <hr>
@@ -518,7 +606,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="آیسد موکا">
         <div class="info">
           <h3>آیسد موکا</h3>
           <hr>
@@ -533,7 +621,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="آیسد کاپوچینو">
         <div class="info">
           <h3>آیسد کاپوچینو</h3>
           <hr>
@@ -548,7 +636,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="آیسد ماچا">
         <div class="info">
           <h3>آیس ماچا</h3>
           <hr>
@@ -559,7 +647,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="آیسد ماچا لته">
         <div class="info">
           <h3>آیسد ماچا لته (انبه/توت فرنگی)</h3>
           <hr>
@@ -570,7 +658,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="آیسد دالگونا">
         <div class="info">
           <h3>آیسد دالگونا</h3>
           <hr>
@@ -581,7 +669,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="آفاگاتو">
         <div class="info">
           <h3>آفاگاتو</h3>
           <hr>
@@ -598,7 +686,7 @@
     <h2>کافی ژلاتو</h2>
     <div class="menu-items">
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/notela.jpg" alt="نوتلا">
         <div class="info">
           <h3>نوتلا</h3>
           <hr>
@@ -606,10 +694,11 @@
             <p></p>
             <h5>185 تومان</h5>
           </div>
+          2 اسکوپ بستنی وانیلی + نوتلا +دو شات قهوه+...
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="آمریکانو">
+        <img src="./img/logo/item-logo.jpg" alt="توت فرنگی">
         <div class="info">
           <h3>توت فرنگی</h3>
           <hr>
@@ -617,10 +706,12 @@
             <p></p>
             <h5>145 تومان</h5>
           </div>
+          2 اسکوپ بستنی وانیلی + توت فرنگی +دو شات قهوه+...
+
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="لوتوس">
         <div class="info">
           <h3>لوتوس</h3>
           <hr>
@@ -628,10 +719,12 @@
             <p></p>
             <h5>175 تومان</h5>
           </div>
+          2 اسکوپ بستنی وانیلی + کرم بیسکوییت لوتوس + بیسکوییت لوتوس +دو شات قهوه+...
+
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/khame-caramel.jpg" alt="خامه کارامل">
         <div class="info">
           <h3>خامه کارامل</h3>
           <hr>
@@ -639,6 +732,7 @@
             <p></p>
             <h5>175 تومان</h5>
           </div>
+          2 اسکوپ بستنی وانیلی + خامه + کارامل +دو شات قهوه+...
         </div>
       </div>
     </div>
@@ -648,7 +742,7 @@
     <h2>فراپه</h2>
     <div class="menu-items">
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="فراپاچینو">
         <div class="info">
           <h3>فراپاچینو</h3>
           <hr>
@@ -656,11 +750,12 @@
             <p></p>
             <h5>165 تومان</h5>
           </div>
+          دو شات قهوه + خامه + بستنی + یخ +  150میل شیر +...
         </div>
       </div>
 
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="آمریکانو">
+        <img src="./img/logo/item-logo.jpg" alt="فراپه توت فرنگی نوتلا">
         <div class="info">
           <h3>فراپه توت فرنگی نوتلا</h3>
           <hr>
@@ -668,10 +763,12 @@
             <p></p>
             <h5>185 تومان</h5>
           </div>
+          دو شات قهوه + خامه + بستنی + یخ +  150میل شیر + توت فرنگی + نوتلا +...
+
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="فراپه موز نوتلا">
         <div class="info">
           <h3>فراپه موز نوتلا</h3>
           <hr>
@@ -679,6 +776,8 @@
             <p></p>
             <h5>190 تومان</h5>
           </div>
+          دو شات قهوه + خامه + بستنی + یخ +  150میل شیر + موز + نوتلا +...
+
         </div>
       </div>
     </div>
@@ -688,7 +787,7 @@
     <h2>شیک</h2>
     <div class="menu-items">
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/shake-classic.jpg" alt="شیک کلاسیک">
         <div class="info">
           <h3>شیک کلاسیک (وانیل/شکلات)</h3>
           <hr>
@@ -699,7 +798,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="شیک موز نوتلا">
         <div class="info">
           <h3>شیک موز نوتلا</h3>
           <hr>
@@ -710,7 +809,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="شیک توت فرنگی نوتلا">
         <div class="info">
           <h3> شیک توت فرنگی نوتلا</h3>
           <hr>
@@ -721,7 +820,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/shake-strawberry.jpg" alt="شیک توت فرنگی">
         <div class="info">
           <h3>شیک توت فرنگی</h3>
           <hr>
@@ -732,7 +831,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="شیک لوتوس">
         <div class="info">
           <h3>شیک لوتوس</h3>
           <hr>
@@ -743,7 +842,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="شیک اورئو">
         <div class="info">
           <h3>شیک اورئو</h3>
           <hr>
@@ -754,7 +853,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="آمریکانو">
+        <img src="./img/logo/item-logo.jpg" alt="شیک نسکافه">
         <div class="info">
           <h3>شیک نسکافه</h3>
           <hr>
@@ -771,7 +870,7 @@
     <h2>نوشیدنی های گرم</h2>
     <div class="menu-items">
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="هات چاکلت">
         <div class="info">
           <h3>هات چاکلت</h3>
           <hr>
@@ -782,7 +881,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="وایت چاکلت">
         <div class="info">
           <h3>وایت چاکلت</h3>
           <hr>
@@ -793,7 +892,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="پینک چاکلت">
         <div class="info">
           <h3>پینک چاکلت</h3>
           <hr>
@@ -804,7 +903,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="ماسالا">
         <div class="info">
           <h3>ماسالا</h3>
           <hr>
@@ -815,7 +914,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="کرک">
         <div class="info">
           <h3>کرک</h3>
           <hr>
@@ -832,7 +931,7 @@
     <h2>نوشیدنی های سرد</h2>
     <div class="menu-items">
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="لیموناد">
         <div class="info">
           <h3>لیموناد</h3>
           <hr>
@@ -843,7 +942,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="آمریکانو">
+        <img src="./img/logo/item-logo.jpg" alt="موهیتو">
         <div class="info">
           <h3>موهیتو</h3>
           <hr>
@@ -854,7 +953,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="رد موهیتو">
         <div class="info">
           <h3>رد موهیتو</h3>
           <hr>
@@ -865,7 +964,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="بلو موهیتو">
         <div class="info">
           <h3>بلو موهیتو</h3>
           <hr>
@@ -876,7 +975,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="بلو اسکای">
         <div class="info">
           <h3>بلو اسکای</h3>
           <hr>
@@ -887,7 +986,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="اوشن بلو">
         <div class="info">
           <h3>اوشن بلو</h3>
           <hr>
@@ -898,7 +997,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="ماکتیل جامائیکایی">
         <div class="info">
           <h3>ماکتیل جامائیکایی</h3>
           <hr>
@@ -909,7 +1008,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="ماکتیل پیناکولادا">
         <div class="info">
           <h3>ماکتیل پیناکولادا</h3>
           <hr>
@@ -919,8 +1018,8 @@
           </div>
         </div>
       </div>
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+      <div class="item special">
+        <img src="./img/signicher.jpg" alt="سیگنیچر لاویتا">
         <div class="info">
           <h3>سیگنیچر لاویتا</h3>
           <hr>
@@ -931,7 +1030,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="اسموتی انبه">
         <div class="info">
           <h3>اسموتی انبه</h3>
           <hr>
@@ -942,7 +1041,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="اسموتی موز">
         <div class="info">
           <h3>اسموتی موز</h3>
           <hr>
@@ -953,7 +1052,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="اسموتی موز انبه">
         <div class="info">
           <h3>اسموتی موز انبه</h3>
           <hr>
@@ -964,7 +1063,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="اسموتی توت فرنگی">
         <div class="info">
           <h3>اسموتی توت فرنگی</h3>
           <hr>
@@ -981,7 +1080,7 @@
     <h2>چای و دمنوش</h2>
     <div class="menu-items">
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/tea.jpg" alt="چای ساده">
         <div class="info">
           <h3>چای ساده</h3>
           <hr>
@@ -1000,7 +1099,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="آمریکانو">
+        <img src="./img/tea.jpg" alt="چای هل و دارچین">
         <div class="info">
           <h3>چای هل و دارچین</h3>
           <hr>
@@ -1011,7 +1110,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/tea.jpg" alt="چای زنجبیل و عسل">
         <div class="info">
           <h3>چای زنجبیل و عسل</h3>
           <hr>
@@ -1022,7 +1121,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="چای کوهی">
         <div class="info">
           <h3>چای کوهی</h3>
           <hr>
@@ -1032,10 +1131,10 @@
           </div>
         </div>
       </div>
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+      <div class="item special">
+        <img src="./img/tea-baghlava.jpg" alt="چای با باقلوا">
         <div class="info">
-          <h3>چای با باقلوا ویژه</h3>
+          <h3>چای با باقلوا</h3>
           <hr>
           <div class="info-grid">
             <p></p>
@@ -1044,7 +1143,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="دمنوش بهشت">
         <div class="info">
           <h3>دمنوش بهشت</h3>
           <hr>
@@ -1055,7 +1154,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="دمنوش آرامش">
         <div class="info">
           <h3>دمنوش آرامش</h3>
           <hr>
@@ -1066,7 +1165,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="دمنوش سلامت">
         <div class="info">
           <h3>دمنوش سلامت</h3>
           <hr>
@@ -1083,7 +1182,7 @@
     <h2>صبحانه</h2>
     <div class="menu-items">
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="صبحانه ایرانی">
         <div class="info">
           <h3>صبحانه ایرانی</h3>
           <hr>
@@ -1091,10 +1190,11 @@
             <p></p>
             <h5>275 تومان</h5>
           </div>
+          دو عدد نیمرو + پنیر + خامه + کره + عسل + خیار + گوجه + گردو + خرما  
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="آمریکانو">
+        <img src="./img/logo/item-logo.jpg" alt="صبحانه انگلیسی">
         <div class="info">
           <h3>صبحانه انگلیسی</h3>
           <hr>
@@ -1102,10 +1202,11 @@
             <p></p>
             <h5>395 تومان</h5>
           </div>
+          نیمرو + لوبیا + بیکن ایرلندی + سیب زمینی + ...
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/omlet.jpg" alt="املت مخصوص">
         <div class="info">
           <h3>املت مخصوص</h3>
           <hr>
@@ -1116,7 +1217,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="سوسیس تخم مرغ مخصوص">
         <div class="info">
           <h3>سوسیس تخم مرغ مخصوص</h3>
           <hr>
@@ -1127,7 +1228,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="تست نیمرو">
         <div class="info">
           <h3>تست نیمرو</h3>
           <hr>
@@ -1135,10 +1236,11 @@
             <p></p>
             <h5>120 تومان</h5>
           </div>
+     دو عدد نیمرو + نان تست + سیب زمینی + پنیر پارمسان + ...
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="تست بیکن">
         <div class="info">
           <h3>تست بیکن</h3>
           <hr>
@@ -1149,7 +1251,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="کروسان پنیر خیار گوجه">
         <div class="info">
           <h3>کروسان پنیر خیار گوجه</h3>
           <hr>
@@ -1159,10 +1261,10 @@
           </div>
         </div>
       </div>
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+      <div class="item special">
+        <img src="./img/logo/item-logo.jpg" alt="پنکیک لاویتا">
         <div class="info">
-          <h3>پنکیک ویژه لاویتا</h3>
+          <h3>پنکیک لاویتا</h3>
           <hr>
           <div class="info-grid">
             <p></p>
@@ -1177,7 +1279,7 @@
     <h2>غذا و میان وعده</h2>
     <div class="menu-items">
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="سیب ساده">
         <div class="info">
           <h3>سیب ساده</h3>
           <hr>
@@ -1188,7 +1290,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="آمریکانو">
+        <img src="./img/logo/item-logo.jpg" alt="سیب زمینی مخصوص">
         <div class="info">
           <h3>سیب زمینی مخصوص</h3>
           <hr>
@@ -1199,7 +1301,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="سیب تنوری با سس قارچ">
         <div class="info">
           <h3>سیب تنوری با سس قارچ</h3>
           <hr>
@@ -1210,7 +1312,7 @@
         </div>
       </div>
        <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/hotchips.jpg" alt="هات چیپس">
         <div class="info">
           <h3>هات چیپس</h3>
           <hr>
@@ -1221,7 +1323,7 @@
         </div>
       </div>
        <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="پنینی مرغ و قارچ">
         <div class="info">
           <h3>پنینی مرغ و قارچ</h3>
           <hr>
@@ -1232,7 +1334,7 @@
         </div>
       </div>
        <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="پنینی مرغ هالوپینو">
         <div class="info">
           <h3>پنینی مرغ هالوپینو</h3>
           <hr>
@@ -1243,7 +1345,7 @@
         </div>
       </div>
        <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="پنینی مخصوص">
         <div class="info">
           <h3>پنینی مخصوص</h3>
           <hr>
@@ -1254,7 +1356,7 @@
         </div>
       </div>
        <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/pastaChicken.jpg" alt="پاستا پنه چیکن آلفردو">
         <div class="info">
           <h3>پاستا پنه چیکن آلفردو</h3>
           <hr>
@@ -1265,7 +1367,7 @@
         </div>
       </div>
        <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="پاستا پنه چیکن پستو">
         <div class="info">
           <h3>پاستا پنه چیکن پستو</h3>
           <hr>
@@ -1280,9 +1382,10 @@
 <!--    کیک و دسر    -->
     <div id="cakes" class="category">
     <h2>کیک و دسر</h2>
+    <h5 style="color:#6a6a6a;">(برای اطلاع ، ویترین کیک هارا مشاهده کنید)</h5>
     <div class="menu-items">
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="کیک شکلاتی">
         <div class="info">
           <h3>کیک شکلاتی</h3>
           <hr>
@@ -1293,7 +1396,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="آمریکانو">
+        <img src="./img/logo/item-logo.jpg" alt="کیک تیرامیسو">
         <div class="info">
           <h3>کیک تیرامیسو</h3>
           <hr>
@@ -1303,8 +1406,8 @@
           </div>
         </div>
       </div>
-      <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+      <div class="item special">
+        <img src="./img/logo/item-logo.jpg" alt="کیک لاوا لاویتا">
         <div class="info">
           <h3>کیک لاوا لاویتا</h3>
           <hr>
@@ -1312,10 +1415,11 @@
             <p></p>
             <h5>190 تومان</h5>
           </div>
+          کیک لاوا + یک اسکوپ بستنی 
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="چیز کیک نوتلا">
         <div class="info">
           <h3>چیز کیک نوتلا</h3>
           <hr>
@@ -1326,7 +1430,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="چیز کیک لوتوس">
         <div class="info">
           <h3>چیز کیک لوتوس</h3>
           <hr>
@@ -1337,7 +1441,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="چیز کیک سن سباستین">
         <div class="info">
           <h3>چیز کیک سن سباستین</h3>
           <hr>
@@ -1345,10 +1449,11 @@
             <p></p>
             <h5>171 تومان</h5>
           </div>
+          چیز کیک سن سباستین + یک شات شکلات
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="کروسان شکلاتی">
         <div class="info">
           <h3>کروسان شکلاتی</h3>
           <hr>
@@ -1359,7 +1464,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="کروسان موز نوتلا">
         <div class="info">
           <h3>کروسان موز نوتلا</h3>
           <hr>
@@ -1370,9 +1475,9 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="باقلوا پسته بستنی">
         <div class="info">
-          <h3>لاقلوا پسته بستنی</h3>
+          <h3>باقلوا پسته بستنی</h3>
           <hr>
           <div class="info-grid">
             <p></p>
@@ -1387,7 +1492,7 @@
     <h2>افزودنی ها</h2>
     <div class="menu-items">
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="اسپرسو دوبل">
+        <img src="./img/logo/item-logo.jpg" alt="شیر بادام">
         <div class="info">
           <h3>شیر بادام</h3>
           <hr>
@@ -1398,7 +1503,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="آمریکانو">
+        <img src="./img/logo/item-logo.jpg" alt="شیر نارگیل">
         <div class="info">
           <h3>شیر نارگیل</h3>
           <hr>
@@ -1409,7 +1514,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="شیر گاومیش">
         <div class="info">
           <h3>شیر گاومیش</h3>
           <hr>
@@ -1420,7 +1525,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="شیر بدون لاکتوز">
         <div class="info">
           <h3>شیر بدون لاکتوز</h3>
           <hr>
@@ -1431,7 +1536,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="سیروپ">
         <div class="info">
           <h3>سیروپ</h3>
           <hr>
@@ -1442,7 +1547,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13" alt="لته">
+        <img src="./img/logo/item-logo.jpg" alt="شکلات">
         <div class="info">
           <h3>شکلات</h3>
           <hr>
@@ -1454,8 +1559,40 @@
       </div>
     </div>
   </div>
-</div>
 
+</div>
+<button id="scrollTopBtn" title="برو بالا">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- <footer class="footer">
+      <ul class="social-icons">
+        <li>
+          <a href="https://www.instagram.com/lavita_cafe_?igsh=YmZqaWN1cG81ZDNz" class="social-icon">
+            <i class="bi bi-instagram"></i>
+          </a>
+       </li>
+       </ul>
+
+      <p>&copy;کلیه حقوق نزد لاویتا محفوظ است.<br><span id="date"></span></p>
+    </footer> -->
+
+<script>
+// نمایش یا مخفی شدن دکمه با اسکرول
+window.onscroll = function() {
+  const btn = document.getElementById("scrollTopBtn");
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+// اسکرول نرم به بالا
+document.getElementById("scrollTopBtn").onclick = function() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+</script>
 <script>
   function scrollToCategory(id) {
     const element = document.getElementById(id);
@@ -1484,6 +1621,10 @@
   }
   
 </script>
+<script>
+    const now = new Date();
+    document.getElementById("date").textContent = now.toLocaleDateString('fa-IR');
+  </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
