@@ -1,7 +1,7 @@
 @font-face {
     font-display: block;
     font-family: "bootstrap-icons";
-    src: url(".//bootstrap-icons.woff") format("woff"),
+    src: url("./bootstrap-icons.woff") format("woff"),
   url("./bootstrap-icons.woff2") format("woff2");
   }
   
@@ -1875,4 +1875,5 @@
   .bi-fuel-pump-fill::before { content: "\f83d"; }
 
   .bi-fuel-pump::before { content: "\f83e"; }
+
 
